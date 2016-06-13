@@ -19,8 +19,6 @@
 		FAFC3EB91D0F243E00919E80 /* GIGPassbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GIGPassbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFC3EBC1D0F243E00919E80 /* GIGPassbook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIGPassbook.h; sourceTree = "<group>"; };
 		FAFC3EBE1D0F243E00919E80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAFC3EC81D0F243E00919E80 /* GIGPassbookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIGPassbookTests.m; sourceTree = "<group>"; };
-		FAFC3ECA1D0F243E00919E80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAFC3ED41D0F25C000919E80 /* PassbookManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassbookManager.swift; sourceTree = "<group>"; };
 		FAFC3ED51D0F25C000919E80 /* Passbook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passbook.swift; sourceTree = "<group>"; };
 		FAFC3ED71D0F25C000919E80 /* PassbookService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassbookService.swift; sourceTree = "<group>"; };
@@ -44,7 +42,6 @@
 			isa = PBXGroup;
 			children = (
 				FAFC3EBB1D0F243E00919E80 /* GIGPassbook */,
-				FAFC3EC71D0F243E00919E80 /* GIGPassbookTests */,
 				FAFC3EBA1D0F243E00919E80 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,15 +64,6 @@
 				FAFC3EDC1D0F264700919E80 /* Info */,
 			);
 			path = GIGPassbook;
-			sourceTree = "<group>";
-		};
-		FAFC3EC71D0F243E00919E80 /* GIGPassbookTests */ = {
-			isa = PBXGroup;
-			children = (
-				FAFC3EC81D0F243E00919E80 /* GIGPassbookTests.m */,
-				FAFC3ECA1D0F243E00919E80 /* Info.plist */,
-			);
-			path = GIGPassbookTests;
 			sourceTree = "<group>";
 		};
 		FAFC3ED31D0F25C000919E80 /* Managers */ = {
