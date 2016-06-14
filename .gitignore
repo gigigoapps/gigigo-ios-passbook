@@ -2,10 +2,6 @@
 
 .DS_Store
 
-#build file
-
-build/
-
 #personal settings
 
 *.pbxuser
@@ -39,3 +35,6 @@ DerivedData
 .idea/
 
 *.orig
+GIGPassbook/GIGPassbook/Frameworks/Carthage/Checkouts
+*.bcsymbolmap
+*.dSYM*
