@@ -35,6 +35,6 @@ DerivedData
 .idea/
 
 *.orig
-GIGPassbook/GIGPassbook/Frameworks/Carthage/Checkouts
 *.bcsymbolmap
 *.dSYM*
+GIGPassbook/Carthage/Checkouts
