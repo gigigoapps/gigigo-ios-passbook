@@ -134,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				FAFC3EBB1D0F243E00919E80 /* GIGPassbook */,
+				FAFC3EDB1D0F263900919E80 /* Frameworks */,
 				FADDA4B71D103B48005A0F1F /* DemoApp */,
 				FADDA4CC1D103B48005A0F1F /* DemoAppTests */,
 				FAFC3EBA1D0F243E00919E80 /* Products */,
@@ -156,7 +157,6 @@
 				FAFC3ED51D0F25C000919E80 /* Passbook.swift */,
 				FAFC3ED31D0F25C000919E80 /* Managers */,
 				FAFC3ED61D0F25C000919E80 /* Services */,
-				FAFC3EDB1D0F263900919E80 /* Frameworks */,
 				FAFC3EDC1D0F264700919E80 /* Info */,
 			);
 			path = GIGPassbook;
@@ -186,6 +186,7 @@
 				FADDA4DD1D103FEE005A0F1F /* PassKit.framework */,
 			);
 			name = Frameworks;
+			path = GIGPassbook;
 			sourceTree = "<group>";
 		};
 		FAFC3EDC1D0F264700919E80 /* Info */ = {
