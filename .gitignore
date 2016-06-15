@@ -38,3 +38,4 @@ DerivedData
 *.bcsymbolmap
 *.dSYM*
 GIGPassbook/Carthage/Checkouts
+*Carthage/Checkouts*
