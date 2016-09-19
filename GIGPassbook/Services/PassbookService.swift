@@ -23,7 +23,7 @@ class PassbookService {
 	func fetchPassFromURL(url: NSURL, completionHandler: PassbookServiceResult -> Void) {
 		let request = Request(
 			method: "GET",
-			baseUrl: url.absoluteString,
+			baseUrl: url.absoluteString!,
 			endpoint: ""
 		)
 		
