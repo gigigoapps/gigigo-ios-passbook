@@ -12,25 +12,25 @@ import PassKit
 
 
 enum PassbookServiceResult {
-	case Success(PKPass)
-	case Error(NSError)
-	case UnsupportedVersionError(NSError)
+	case success(PKPass)
+	case error(NSError)
+	case unsupportedVersionError(NSError)
 }
 
 
 class PassbookService {
-	
-	func fetchPassFromURL(url: NSURL, completionHandler: PassbookServiceResult -> Void) {
+
+	func fetchPassFromURL(_ url: URL, completionHandler: @escaping (PassbookServiceResult) -> Void) {
 		let request = Request(
 			method: "GET",
-			baseUrl: url.absoluteString!,
+			baseUrl: url.absoluteString,
 			endpoint: ""
 		)
 		
 		request.fetchData { response in
 			switch response.status {
 				
-			case .Success:
+			case .success:
 				self.onSuccess(response, completionHandler: completionHandler)
 				
 			default:
@@ -42,11 +42,11 @@ class PassbookService {
 	
 	// MARK: - Private Helpers
 	
-	private func onSuccess(response: Response, completionHandler: PassbookServiceResult -> Void) {
-		guard let data = response.body as? NSData else {
+	fileprivate func onSuccess(_ response: Response, completionHandler: (PassbookServiceResult) -> Void) {
+		guard let data = response.body as? Data else {
 			let error = self.errorUnknown()
 			
-			completionHandler(.Error(error))
+			completionHandler(.error(error))
 			return
 		}
 		
@@ -56,31 +56,31 @@ class PassbookService {
 		if let errorUnwrap = error {
 			switch errorUnwrap.code {
 				
-			case PKPassKitErrorCode.UnsupportedVersionError.rawValue:
-				completionHandler(.UnsupportedVersionError(errorUnwrap))
+			case PKPassKitError.unsupportedVersionError.rawValue:
+				completionHandler(.unsupportedVersionError(errorUnwrap))
 				
 			default:
-				completionHandler(.Error(errorUnwrap))
+				completionHandler(.error(errorUnwrap))
 			}
 		}
 		else {
-			completionHandler(.Success(pass))
+			completionHandler(.success(pass))
 		}
 		
 	}
 	
-	private func onFail(response: Response, completionHandler: PassbookServiceResult -> Void) {
+	fileprivate func onFail(_ response: Response, completionHandler: (PassbookServiceResult) -> Void) {
 		guard let error = response.error else {
 			let error = self.errorUnknown()
 			
-			completionHandler(.Error(error))
+			completionHandler(.error(error))
 			return
 		}
 		
-		completionHandler(.Error(error))
+		completionHandler(.error(error))
 	}
 	
-	private func errorUnknown() -> NSError {
+	fileprivate func errorUnknown() -> NSError {
 		let error = NSError(
 			domain: kGIGPassbookErrorDomain,
 			code: -1,

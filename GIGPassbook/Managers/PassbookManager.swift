@@ -13,9 +13,9 @@ import GIGLibrary
 
 class PassbookManager {
 	
-	private var app = Application()
+	fileprivate var app = Application()
 	
-	func addPass(pass: PKPass) {
+	func addPass(_ pass: PKPass) {
 		let addVC = PKAddPassesViewController(pass: pass)
 		self.app.presentModal(addVC)
 	}

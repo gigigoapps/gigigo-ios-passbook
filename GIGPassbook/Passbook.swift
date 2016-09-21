@@ -13,44 +13,44 @@ public let kGIGPassbookErrorDomain = "com.giglibrary.passbook"
 public let kGIGPassbookErrorMessage = "GIGPASSBOOK_ERROR_MESSAGE"
 
 public enum PassbookResult {
-	case Success
-	case Error(NSError)
-	case UnsupportedVersionError(NSError)
+	case success
+	case error(NSError)
+	case unsupportedVersionError(NSError)
 }
 
-public class Passbook {
+open class Passbook {
 	
-	private var service = PassbookService()
-	private var passbookManager = PassbookManager()
+	fileprivate var service = PassbookService()
+	fileprivate var passbookManager = PassbookManager()
 	
 	
 	public init() {}
 	
-	public func addPassbookFromUrl(urlString: String, completionHandler: PassbookResult -> Void) {
-		guard let url = NSURL(string: urlString) else {
-			completionHandler(.Error(self.errorURLNotValid()))
+	open func addPassbookFromUrl(_ urlString: String, completionHandler: @escaping (PassbookResult) -> Void) {
+		guard let url = URL(string: urlString) else {
+			completionHandler(.error(self.errorURLNotValid()))
 			return
 		}
 		
 		self.service.fetchPassFromURL(url) { result in
 			switch result {
 				
-			case .Success(let pass):
+			case .success(let pass):
 				self.passbookManager.addPass(pass)
-				completionHandler(.Success)
+				completionHandler(.success)
 				
-			case .UnsupportedVersionError(let error):
-				completionHandler(.UnsupportedVersionError(error))
+			case .unsupportedVersionError(let error):
+				completionHandler(.unsupportedVersionError(error))
 				
-			case .Error(let error):
-				completionHandler(.Error(error))
+			case .error(let error):
+				completionHandler(.error(error))
 			}
 		}
 		
 	}
 	
 	
-	private func errorURLNotValid() -> NSError {
+	fileprivate func errorURLNotValid() -> NSError {
 		let error = NSError(
 			domain: kGIGPassbookErrorDomain,
 			code: 10000,
