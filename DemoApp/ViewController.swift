@@ -13,29 +13,29 @@ import GIGLibrary
 
 class ViewController: UIViewController {
 	
-	private let passbook = Passbook()
+	fileprivate let passbook = Passbook()
 	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		LogManager.shared.appName = "GIGPassbook"
-		LogManager.shared.logLevel = .Debug
+		LogManager.shared.logLevel = .debug
 	}
 	
-	@IBAction func onButtonDownloadTap(sender: AnyObject) {
+	@IBAction func onButtonDownloadTap(_ sender: AnyObject) {
 		let url = "https://api-mcd.q.gigigoapps.com/v1/campaign/Lk034vMjO9S8oooVDnPY/coupon/kvweME3RGzsnKKKOVeko/passbook"
 		
 		self.passbook.addPassbookFromUrl(url) { result in
 			switch result {
 				
-			case .Success:
+			case .success:
 				LogInfo("Passbook: downloaded successfully")
 				
-			case .UnsupportedVersionError(_):
+			case .unsupportedVersionError(_):
 				LogInfo("Passbook: Unsupported version")
 				
-			case .Error(let error):
+			case .error(let error):
 				LogInfo("Passbook: Error")
 				LogError(error)
 			}
