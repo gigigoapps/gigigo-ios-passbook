@@ -51,7 +51,7 @@ class PassbookService {
 		}
 		
 		var error: NSError?
-		let pass = PKPass(data: data, error: &error)
+		let pass = PKPass(data: data as Data, error: &error)
 		
 		if let errorUnwrap = error {
 			switch errorUnwrap.code {
