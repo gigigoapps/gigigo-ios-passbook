@@ -43,7 +43,7 @@ class PassbookService {
 	// MARK: - Private Helpers
 	
 	fileprivate func onSuccess(_ response: Response, completionHandler: (PassbookServiceResult) -> Void) {
-		guard let data = response.body as? Data else {
+		guard let data = response.body else {
 			let error = self.errorUnknown()
 			
 			completionHandler(.error(error))

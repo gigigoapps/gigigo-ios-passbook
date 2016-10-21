@@ -116,8 +116,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import UIKit;
 #endif
 
-#import <GIGLibrary/GIGLibrary.h>
-
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
 
@@ -166,24 +164,21 @@ SWIFT_CLASS("_TtC10GIGLibrary5Alert")
 - (NSArray<NSManagedObject *> * _Nullable)fetchList:(NSString * _Nonnull)entityName predicateString:(NSString * _Nonnull)predicateString;
 @end
 
-@class GIGURLManager;
-
-SWIFT_CLASS("_TtC10GIGLibrary7Request")
-@interface Request : GIGURLCommunicator
-@property (nonatomic, copy) NSString * _Nonnull method;
-@property (nonatomic, copy) NSString * _Nonnull endpoint;
-@property (nonatomic, copy) NSDictionary<NSString *, NSString *> * _Nullable headers;
-@property (nonatomic, copy) NSDictionary<NSString *, NSObject *> * _Nullable urlParams;
-@property (nonatomic, copy) NSDictionary<NSString *, NSObject *> * _Nullable bodyParams;
-@property (nonatomic) BOOL verbose;
-- (nonnull instancetype)initWithMethod:(NSString * _Nonnull)method baseUrl:(NSString * _Nonnull)baseUrl endpoint:(NSString * _Nonnull)endpoint headers:(NSDictionary<NSString *, NSString *> * _Nullable)headers urlParams:(NSDictionary<NSString *, NSObject *> * _Nullable)urlParams bodyParams:(NSDictionary<NSString *, NSObject *> * _Nullable)bodyParams verbose:(BOOL)verbose OBJC_DESIGNATED_INITIALIZER;
-- (null_unspecified instancetype)initWithManager:(GIGURLManager * _Null_unspecified)manager SWIFT_UNAVAILABLE;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-@end
-
 
 @interface UIColor (SWIFT_EXTENSION(GIGLibrary))
 - (NSString * _Nonnull)hexString:(BOOL)includeAlpha;
+@end
+
+
+@interface UIImage (SWIFT_EXTENSION(GIGLibrary))
++ (UIImage * _Nullable)gifWithData:(NSData * _Nonnull)data;
++ (UIImage * _Nullable)gifWithUrl:(NSString * _Nonnull)url;
++ (UIImage * _Nullable)gifWithName:(NSString * _Nonnull)name;
+@end
+
+
+@interface UIImageView (SWIFT_EXTENSION(GIGLibrary))
+- (void)imageFromURLWithUrlString:(NSString * _Nonnull)urlString;
 @end
 
 
