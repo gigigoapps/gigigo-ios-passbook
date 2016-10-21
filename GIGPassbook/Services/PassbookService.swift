@@ -27,7 +27,7 @@ class PassbookService {
 			endpoint: ""
 		)
 		
-		request.fetchData { response in
+		request.fetch { response in
 			switch response.status {
 				
 			case .success:
@@ -51,7 +51,7 @@ class PassbookService {
 		}
 		
 		var error: NSError?
-		let pass = PKPass(data: data as Data, error: &error)
+		let pass = PKPass(data: data, error: &error)
 		
 		if let errorUnwrap = error {
 			switch errorUnwrap.code {
