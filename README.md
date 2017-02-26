@@ -21,7 +21,7 @@ github "gigigoapps/gigigo-ios-passbook" ~> 3.0
 
 You only need to specify an url string:
 ```swift
-self.passbook.addPassbookFromUrl("http://host.com/path/passbook") { result in
+Passbook().addPassbookFromUrl("http://host.com/path/passbook") { result in
   switch result {
   case .success:
     print("Passbook: downloaded successfully")
