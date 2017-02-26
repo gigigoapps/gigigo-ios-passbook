@@ -13,8 +13,7 @@ import GIGLibrary
 
 class ViewController: UIViewController {
 	
-	fileprivate let passbook = Passbook()
-	
+	private let passbook = Passbook()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
