@@ -31,5 +31,5 @@ Passbook().addPassbookFromUrl("http://host.com/path/passbook") { result in
 
   case .error(let error):
     print(error)
-	}
+  }
 }
