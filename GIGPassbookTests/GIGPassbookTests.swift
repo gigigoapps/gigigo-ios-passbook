@@ -1,15 +1,14 @@
 //
-//  DemoAppTests.swift
-//  DemoAppTests
+//  GIGPassbookTests.swift
+//  GIGPassbookTests
 //
-//  Created by Alejandro Jiménez Agudo on 14/6/16.
-//  Copyright © 2016 Gigigo SL. All rights reserved.
+//  Created by Alejandro Jiménez Agudo on 27/2/17.
+//  Copyright © 2017 Gigigo SL. All rights reserved.
 //
 
 import XCTest
-@testable import DemoApp
 
-class DemoAppTests: XCTestCase {
+class GIGPassbookTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -24,13 +23,6 @@ class DemoAppTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
     }
     
 }

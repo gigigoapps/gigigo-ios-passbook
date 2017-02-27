@@ -11,12 +11,14 @@
 		FA3551E81D11654B00141449 /* GIGLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3551E71D11654B00141449 /* GIGLibrary.framework */; };
 		FA3551E91D11655800141449 /* GIGLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3551E71D11654B00141449 /* GIGLibrary.framework */; };
 		FA3551EA1D11656E00141449 /* GIGLibrary.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA3551E71D11654B00141449 /* GIGLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA56595A1E63A8DF00E6CD55 /* GIGPassbookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5659591E63A8DF00E6CD55 /* GIGPassbookTests.swift */; };
+		FA56595C1E63A8DF00E6CD55 /* GIGPassbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFC3EB91D0F243E00919E80 /* GIGPassbook.framework */; };
+		FA5659631E63A9F400E6CD55 /* GIGLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3551E71D11654B00141449 /* GIGLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FADDA4B91D103B48005A0F1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDA4B81D103B48005A0F1F /* AppDelegate.swift */; };
 		FADDA4BB1D103B48005A0F1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDA4BA1D103B48005A0F1F /* ViewController.swift */; };
 		FADDA4BE1D103B48005A0F1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADDA4BC1D103B48005A0F1F /* Main.storyboard */; };
 		FADDA4C01D103B48005A0F1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADDA4BF1D103B48005A0F1F /* Assets.xcassets */; };
 		FADDA4C31D103B48005A0F1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADDA4C11D103B48005A0F1F /* LaunchScreen.storyboard */; };
-		FADDA4CE1D103B48005A0F1F /* DemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDA4CD1D103B48005A0F1F /* DemoAppTests.swift */; };
 		FADDA4DA1D103CF0005A0F1F /* GIGPassbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFC3EB91D0F243E00919E80 /* GIGPassbook.framework */; };
 		FADDA4DE1D103FEE005A0F1F /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADDA4DD1D103FEE005A0F1F /* PassKit.framework */; };
 		FAFC3EBD1D0F243E00919E80 /* GIGPassbook.h in Headers */ = {isa = PBXBuildFile; fileRef = FAFC3EBC1D0F243E00919E80 /* GIGPassbook.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,12 +28,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FADDA4CA1D103B48005A0F1F /* PBXContainerItemProxy */ = {
+		FA56595D1E63A8DF00E6CD55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FAFC3EB01D0F243E00919E80 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FADDA4B51D103B48005A0F1F;
-			remoteInfo = DemoApp;
+			remoteGlobalIDString = FAFC3EB81D0F243E00919E80;
+			remoteInfo = GIGPassbook;
 		};
 		FADDA4D61D103CB3005A0F1F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -43,6 +45,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		FA5659621E63A9E400E6CD55 /* Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FA5659631E63A9F400E6CD55 /* GIGLibrary.framework in Frameworks */,
+			);
+			name = Frameworks;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FADDA4DB1D103D0E005A0F1F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,6 +71,9 @@
 /* Begin PBXFileReference section */
 		FA3551E51D11648500141449 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		FA3551E71D11654B00141449 /* GIGLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GIGLibrary.framework; path = ../Carthage/Build/iOS/GIGLibrary.framework; sourceTree = "<group>"; };
+		FA5659571E63A8DF00E6CD55 /* GIGPassbookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GIGPassbookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA5659591E63A8DF00E6CD55 /* GIGPassbookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIGPassbookTests.swift; sourceTree = "<group>"; };
+		FA56595B1E63A8DF00E6CD55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FADDA4B61D103B48005A0F1F /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADDA4B81D103B48005A0F1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FADDA4BA1D103B48005A0F1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,9 +81,6 @@
 		FADDA4BF1D103B48005A0F1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FADDA4C21D103B48005A0F1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FADDA4C41D103B48005A0F1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FADDA4C91D103B48005A0F1F /* DemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FADDA4CD1D103B48005A0F1F /* DemoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppTests.swift; sourceTree = "<group>"; };
-		FADDA4CF1D103B48005A0F1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FADDA4DD1D103FEE005A0F1F /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		FADDA4DF1D103FEE005A0F1F /* DemoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DemoApp.entitlements; sourceTree = "<group>"; };
 		FAFC3EB91D0F243E00919E80 /* GIGPassbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GIGPassbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +92,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FA5659541E63A8DF00E6CD55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA56595C1E63A8DF00E6CD55 /* GIGPassbook.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FADDA4B31D103B48005A0F1F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,13 +107,6 @@
 				FADDA4DE1D103FEE005A0F1F /* PassKit.framework in Frameworks */,
 				FADDA4DA1D103CF0005A0F1F /* GIGPassbook.framework in Frameworks */,
 				FA3551E91D11655800141449 /* GIGLibrary.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FADDA4C61D103B48005A0F1F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +131,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FA5659581E63A8DF00E6CD55 /* GIGPassbookTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA5659591E63A8DF00E6CD55 /* GIGPassbookTests.swift */,
+				FA56595B1E63A8DF00E6CD55 /* Info.plist */,
+			);
+			path = GIGPassbookTests;
+			sourceTree = "<group>";
+		};
 		FADDA4B71D103B48005A0F1F /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,22 +152,13 @@
 			path = DemoApp;
 			sourceTree = "<group>";
 		};
-		FADDA4CC1D103B48005A0F1F /* DemoAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				FADDA4CD1D103B48005A0F1F /* DemoAppTests.swift */,
-				FADDA4CF1D103B48005A0F1F /* Info.plist */,
-			);
-			path = DemoAppTests;
-			sourceTree = "<group>";
-		};
 		FAFC3EAF1D0F243E00919E80 = {
 			isa = PBXGroup;
 			children = (
 				FAFC3EBB1D0F243E00919E80 /* GIGPassbook */,
-				FAFC3EDB1D0F263900919E80 /* Frameworks */,
 				FADDA4B71D103B48005A0F1F /* DemoApp */,
-				FADDA4CC1D103B48005A0F1F /* DemoAppTests */,
+				FA5659581E63A8DF00E6CD55 /* GIGPassbookTests */,
+				FAFC3EDB1D0F263900919E80 /* Frameworks */,
 				FAFC3EBA1D0F243E00919E80 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -154,7 +168,7 @@
 			children = (
 				FAFC3EB91D0F243E00919E80 /* GIGPassbook.framework */,
 				FADDA4B61D103B48005A0F1F /* DemoApp.app */,
-				FADDA4C91D103B48005A0F1F /* DemoAppTests.xctest */,
+				FA5659571E63A8DF00E6CD55 /* GIGPassbookTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,6 +234,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		FA5659561E63A8DF00E6CD55 /* GIGPassbookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA56595F1E63A8DF00E6CD55 /* Build configuration list for PBXNativeTarget "GIGPassbookTests" */;
+			buildPhases = (
+				FA5659531E63A8DF00E6CD55 /* Sources */,
+				FA5659541E63A8DF00E6CD55 /* Frameworks */,
+				FA5659551E63A8DF00E6CD55 /* Resources */,
+				FA5659621E63A9E400E6CD55 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA56595E1E63A8DF00E6CD55 /* PBXTargetDependency */,
+			);
+			name = GIGPassbookTests;
+			productName = GIGPassbookTests;
+			productReference = FA5659571E63A8DF00E6CD55 /* GIGPassbookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FADDA4B51D103B48005A0F1F /* DemoApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FADDA4D41D103B48005A0F1F /* Build configuration list for PBXNativeTarget "DemoApp" */;
@@ -238,24 +271,6 @@
 			productName = DemoApp;
 			productReference = FADDA4B61D103B48005A0F1F /* DemoApp.app */;
 			productType = "com.apple.product-type.application";
-		};
-		FADDA4C81D103B48005A0F1F /* DemoAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FADDA4D51D103B48005A0F1F /* Build configuration list for PBXNativeTarget "DemoAppTests" */;
-			buildPhases = (
-				FADDA4C51D103B48005A0F1F /* Sources */,
-				FADDA4C61D103B48005A0F1F /* Frameworks */,
-				FADDA4C71D103B48005A0F1F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FADDA4CB1D103B48005A0F1F /* PBXTargetDependency */,
-			);
-			name = DemoAppTests;
-			productName = DemoAppTests;
-			productReference = FADDA4C91D103B48005A0F1F /* DemoAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		FAFC3EB81D0F243E00919E80 /* GIGPassbook */ = {
 			isa = PBXNativeTarget;
@@ -281,10 +296,14 @@
 		FAFC3EB01D0F243E00919E80 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Gigigo SL";
 				TargetAttributes = {
+					FA5659561E63A8DF00E6CD55 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 					FADDA4B51D103B48005A0F1F = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = SU5BA5HAQK;
@@ -294,11 +313,6 @@
 								enabled = 1;
 							};
 						};
-					};
-					FADDA4C81D103B48005A0F1F = {
-						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
-						TestTargetID = FADDA4B51D103B48005A0F1F;
 					};
 					FAFC3EB81D0F243E00919E80 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -321,12 +335,19 @@
 			targets = (
 				FAFC3EB81D0F243E00919E80 /* GIGPassbook */,
 				FADDA4B51D103B48005A0F1F /* DemoApp */,
-				FADDA4C81D103B48005A0F1F /* DemoAppTests */,
+				FA5659561E63A8DF00E6CD55 /* GIGPassbookTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FA5659551E63A8DF00E6CD55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FADDA4B41D103B48005A0F1F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -334,13 +355,6 @@
 				FADDA4C31D103B48005A0F1F /* LaunchScreen.storyboard in Resources */,
 				FADDA4C01D103B48005A0F1F /* Assets.xcassets in Resources */,
 				FADDA4BE1D103B48005A0F1F /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FADDA4C71D103B48005A0F1F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,20 +369,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FA5659531E63A8DF00E6CD55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA56595A1E63A8DF00E6CD55 /* GIGPassbookTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FADDA4B21D103B48005A0F1F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FADDA4BB1D103B48005A0F1F /* ViewController.swift in Sources */,
 				FADDA4B91D103B48005A0F1F /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FADDA4C51D103B48005A0F1F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FADDA4CE1D103B48005A0F1F /* DemoAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,10 +399,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FADDA4CB1D103B48005A0F1F /* PBXTargetDependency */ = {
+		FA56595E1E63A8DF00E6CD55 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FADDA4B51D103B48005A0F1F /* DemoApp */;
-			targetProxy = FADDA4CA1D103B48005A0F1F /* PBXContainerItemProxy */;
+			target = FAFC3EB81D0F243E00919E80 /* GIGPassbook */;
+			targetProxy = FA56595D1E63A8DF00E6CD55 /* PBXContainerItemProxy */;
 		};
 		FADDA4D71D103CB3005A0F1F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -417,6 +431,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FA5659601E63A8DF00E6CD55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				INFOPLIST_FILE = GIGPassbookTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gigigo.GIGPassbookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FA5659611E63A8DF00E6CD55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				INFOPLIST_FILE = GIGPassbookTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gigigo.GIGPassbookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		FADDA4D01D103B48005A0F1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -451,40 +493,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gigigo.DemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		FADDA4D21D103B48005A0F1F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = DemoAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gigigo.DemoAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoApp.app/DemoApp";
-			};
-			name = Debug;
-		};
-		FADDA4D31D103B48005A0F1F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = DemoAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gigigo.DemoAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoApp.app/DemoApp";
 			};
 			name = Release;
 		};
@@ -637,20 +645,19 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FA56595F1E63A8DF00E6CD55 /* Build configuration list for PBXNativeTarget "GIGPassbookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA5659601E63A8DF00E6CD55 /* Debug */,
+				FA5659611E63A8DF00E6CD55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		FADDA4D41D103B48005A0F1F /* Build configuration list for PBXNativeTarget "DemoApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FADDA4D01D103B48005A0F1F /* Debug */,
 				FADDA4D11D103B48005A0F1F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FADDA4D51D103B48005A0F1F /* Build configuration list for PBXNativeTarget "DemoAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FADDA4D21D103B48005A0F1F /* Debug */,
-				FADDA4D31D103B48005A0F1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

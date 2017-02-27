@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FAFC3EC21D0F243E00919E80"
+               BlueprintIdentifier = "FA5659561E63A8DF00E6CD55"
                BuildableName = "GIGPassbookTests.xctest"
                BlueprintName = "GIGPassbookTests"
                ReferencedContainer = "container:GIGPassbook.xcodeproj">
