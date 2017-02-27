@@ -1,0 +1,5 @@
+language: objective-c
+osx_image: xcode8.2
+
+script:
+  - set -o pipefail && xcodebuild -project GIGPassbook.xcodeproj -scheme GIGPassbook -sdk iphonesimulator -destination "platform=iOS Simulator,OS=10.1,name=iPhone 6" test | xcpretty
