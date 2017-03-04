@@ -1,6 +1,24 @@
 language: objective-c
 osx_image: xcode8.2
-
+env:
+  global:
+  - FRAMEWORK_NAME=GIGPassbook
+before_script:
+- carthage version
+- carthage bootstrap --platform iOS
 script:
-  - carthage bootstrap --no-use-binaries --platform iOS
-  - set -o pipefail && xcodebuild -project GIGPassbook.xcodeproj -scheme GIGPassbook -sdk iphonesimulator -destination "platform=iOS Simulator,OS=10.1,name=iPhone 6" test | xcpretty
+- set -o pipefail && xcodebuild -project GIGPassbook.xcodeproj -scheme GIGPassbook
+  -sdk iphonesimulator -destination "platform=iOS Simulator,OS=10.1,name=iPhone 6"
+  test | xcpretty
+before_deploy:
+- carthage build --no-skip-current
+- carthage archive $FRAMEWORK_NAME
+deploy:
+  provider: releases
+  api_key:
+    secure: pbVeWdl36HV4lyRBDBcawegP+gVIajhuLL17JtOhJig9QDFs0/0aGAZxoIGa7erqyiLPVTi8XADIOJhMv5YBeRBP56PJM944GzCRyf9Uh3qoNzRQ3db0FPrQuAfgqf+J/XRlZg7p/oasjnZJG6fPh+tO/i/rtonO50AOWVlMfnspqRKJEPcUvW0TeBEdhbKhQzARbDXi4BgcnmY53ZzY4zGv3ktPpFQHA7k0O/7VPPnERHqgslPerjS/jUhdEjkK4faU6bFTNodynKswdRkC0QGNJA7F6MiGmqXbm3f11fDIgLvf8IF5gheS/GKivmpao1yTGrkJVLRzUzV5i5mL59P/vdnNxd8aLIcXHQUOI11LXONK3FaaQcSG/T/ukryQe8T9XifiBKUoM+9wiUP5wPp6tvcjCNoJ0YqZIf+mh8BsN17BQu6BbUC/o1ckH+C1QSQYp1SE5SZVkF1jTFQpPPZ8/Lst32bkdgh9mPWxYjo8qjAK/y7gOYE/T3850j7TyCfH4Y/bgZaPLLq+HDZFwvChsQdxEdjY/6xpYpE4WyON/cfSKygbfiOo1Z46Ov5OHx6M68WYp3C/vTvNCHjC9mK8kGfg+Jf9vlZrqPrbmOvDonczeJY5KKput/FDK3VxKRlOE1Ffnfe6xvs58YqDAzY6q40PFAfBV1P1GCYC3n4=
+  file: "$FRAMEWORK_NAME.framework.zip"
+  skip_cleanup: true
+  on:
+    repo: gigigoapps/gigigo-ios-passbook
+    tags: true
