@@ -4,15 +4,13 @@ env:
   global:
   - FRAMEWORK_NAME=GIGPassbook
 before_script:
-- carthage version
-- carthage bootstrap --platform iOS
+  - carthage version
+  - carthage bootstrap --platform iOS
 script:
-- set -o pipefail && xcodebuild -project GIGPassbook.xcodeproj -scheme GIGPassbook
-  -sdk iphonesimulator -destination "platform=iOS Simulator,OS=10.1,name=iPhone 6"
-  test | xcpretty
+  - set -o pipefail && xcodebuild -project GIGPassbook.xcodeproj -scheme GIGPassbook -sdk iphonesimulator -destination "platform=iOS Simulator,OS=10.1,name=iPhone 6" test | xcpretty
 before_deploy:
-- carthage build --no-skip-current
-- carthage archive $FRAMEWORK_NAME
+  - carthage build --no-skip-current
+  - carthage archive $FRAMEWORK_NAME
 deploy:
   provider: releases
   api_key:
@@ -22,3 +20,6 @@ deploy:
   on:
     repo: gigigoapps/gigigo-ios-passbook
     tags: true
+notifications:
+  slack:
+    secure: BKMXm4fFvw+KV6QyojkH2iH3XIwF8koQxjOOVCbCfu7hB9zt3cDhh2wgbj/PWbvXTm79BAZ+1Cw5VPScgRxCwaqbGfKQTLMh8NylEh7PwaC6GxyOUjt7v9uit7OcnQQSTQOhvkqZAGkDttZ8I/Wa/IqsLYmqSW4CYsB+DcR5BBWBUnDeAym4FvMEGXfDoCI870fxqa+Jh7podpx+Zxuy5DOXEJ16oixbOmlZcHE9uLg2XJ2KGSN1JqkJ0MJNIPMXr2WjLTxQ6aGuNjp9DXkyT8gVwnU6DcqPg1DbJDPPXnVbd1DM++9bk0Wp93Q9kRGxCqL/N+B8qyBkIcIHhEmWL/lm0pX4pqoU/jNbTrL03OT8eu5uR8rvpexiQ13LLSQhq2DL49vCzM7OA8gt+lh+2MJYeEkeLlYRyrheNF1kVkWoHofar62G/J/u/1fAFT8EdFJx3tINoLAhBQkb59qCySttIfpPp1YeRIyWBiXlCPU4zw/j84U3l81pHElpCFWXOBO5pwvBLhO1bRuOFumbtCE5fXDXaj69Ed51SlkFxmeD6lqjJ0yhPH9O0U+eFvnQEtIrK1ArLiOpLOlvXXRqA8ISFWRoZW47gQV59YWx4WyBJzK6JyVzb/xsBHzvY+0vR9oM0morewoWg4hcYH1yOiMnGeLOyslbQX1bxvEf8wI=
