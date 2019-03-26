@@ -17,7 +17,7 @@ class PassbookManager {
 	
 	func addPass(_ pass: PKPass) {
 		let addVC = PKAddPassesViewController(pass: pass)
-		self.app.presentModal(addVC)
+        _ = addVC.map({ self.app.presentModal($0) })
 	}
 	
 }
