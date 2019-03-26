@@ -50,23 +50,20 @@ class PassbookService {
 			return
 		}
 		
-		var error: NSError?
-		let pass = PKPass(data: data, error: &error)
-		
-		if let errorUnwrap = error {
-			switch errorUnwrap.code {
-				
-			case PKPassKitError.unsupportedVersionError.rawValue:
-				completionHandler(.unsupportedVersionError(errorUnwrap))
-				
-			default:
-				completionHandler(.error(errorUnwrap))
-			}
-		}
-		else {
-			completionHandler(.success(pass))
-		}
-		
+        do {
+            let pass = try PKPass(data: data)
+            completionHandler(.success(pass))
+        } catch {
+            let nsError: NSError = error as NSError
+            switch nsError.code {
+                
+            case PKPassKitError.unsupportedVersionError.rawValue:
+                completionHandler(.unsupportedVersionError(nsError))
+                
+            default:
+                completionHandler(.error(nsError))
+            }
+        }
 	}
 	
 	fileprivate func onFail(_ response: Response, completionHandler: (PassbookServiceResult) -> Void) {
